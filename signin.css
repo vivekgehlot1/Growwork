@@ -1,0 +1,40 @@
+header{
+    height: 60vh;
+    width: 100%;
+    text-align: center;
+    color: rgb(70, 136, 4);
+    position: fixed;top: 0%;
+}
+.cleckid{
+    width: 60%;
+    height: 400px;
+    margin-left: 20%;
+    display:flex;
+    margin-top: 100px;
+    text-align: center;
+    align-items: center;
+
+    
+}
+.box1{
+    border: 1px solid black;
+    width: 45%;
+    height: 300px;
+    margin: 20px;
+    padding-top: 30px;
+
+
+}
+.botton1{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    
+}
+.botton{
+    margin-top: 50px;
+    padding: 5px;
+    border: 2px solid black;
+    padding-bottom: 10px;
+}

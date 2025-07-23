@@ -1,0 +1,35 @@
+<?php
+// Database configuration
+$servername = "localhost";
+$dbUsername = "root"; // Replace with your MySQL username
+$dbPassword = ""; // Replace with your MySQL password
+$dbname = "growworkDB";
+
+// Create connection
+$conn = new mysqli($servername, $dbUsername, $dbPassword, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $usernameOrEmail = $_POST['usernameOrEmail'];
+
+    // You would normally hash the password and compare it securely here.
+    // For simplicity, this example doesn't include password handling.
+
+    // SQL query to check if the user exists
+    $sql = "SELECT * FROM users WHERE username='$usernameOrEmail' OR email='$usernameOrEmail'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        echo "Login successful!";
+    } else {
+        echo "Invalid username or email.";
+    }
+}
+
+$conn->close();
+?>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Profiles</title>
+    <link rel="stylesheet" href="prof.css">
+</head>
+<body>
+    <header class="navbar_login">
+        <h1 class="hading"> Grow work</h1>
+    </header>
+    <div class="container">
+        <h1>Create Your Profile</h1>
+        <form action="submit_profile.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" name="profession" required>
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" required></textarea>
+
+            <label for="portfolio">Portfolio (links to projects):</label>
+            <textarea id="portfolio" name="portfolio" required></textarea>
+
+            <label for="video_url">Video Introduction (YouTube URL):</label>
+            <input type="url" id="video_url" name="video_url" required>
+
+            <input type="submit" value="Create Profile">
+        </form>
+
+        <h2>Growwork Profiles</h2>
+        <div id="profiles">
+            <!-- Profiles will be loaded here using JavaScript -->
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

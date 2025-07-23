@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Matchmaker</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <div id="root">
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for sending messages
+        let messages = [];
+
+        function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const chatMessages = document.getElementById('chatMessages');
+            const messageText = messageInput.value.trim();
+
+            if (messageText !== '') {
+                messages.push(messageText);
+                messageInput.value = '';
+                chatMessages.innerHTML = messages.map(msg => `<p>${msg}</p>`).join('');
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>

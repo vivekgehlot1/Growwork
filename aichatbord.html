@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatbord</title>
+    <link rel="stylesheet" href="aichatbord.css">
+</head>
+<body>
+    
+<div class="ai-matching-container">
+    <form id="aiMatchingForm" class="ai-matching-form">
+        <h2>Find the Best Freelancer</h2>
+        <label for="projectName">Project Name:</label>
+        <input type="text" id="projectName" name="projectName" placeholder="Enter project name">
+
+        <label for="projectDescription">Project Description:</label>
+        <textarea id="projectDescription" name="projectDescription" placeholder="Describe your project"></textarea>
+
+        <label for="skillsRequired">Required Skills:</label>
+        <input type="text" id="skillsRequired" name="skillsRequired" placeholder="Enter required skills">
+
+        <button type="submit">Match Freelancers</button>
+    </form>
+
+    <div class="matched-freelancers">
+        <h3>Matched Freelancers</h3>
+        <ul id="freelancerList">
+            <!-- Matched freelancers will be listed here -->
+        </ul>
+    </div>
+</div>
+</body>
+</html>
